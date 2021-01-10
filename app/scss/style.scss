@@ -8,7 +8,6 @@
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-
 }
 // start header
 
@@ -475,7 +474,6 @@
     background-color: rgba(236, 234, 234, 0.5);
     padding-bottom: 40px;
     margin-top: 30px;
-    
 }
 .info-title {
     @include f700;
@@ -1334,18 +1332,18 @@ text {
         @include f700;
     }
 }
-.graphics{
+.graphics {
     width: 100%;
     padding-left: 25px;
     &__inner {
         display: flex;
         justify-content: space-between;
         &-tabs {
-        display: inline-block;
-        text-align: start;
-        max-width: 205px;
-        width: 100%;
-        @include f700;
+            display: inline-block;
+            text-align: start;
+            max-width: 205px;
+            width: 100%;
+            @include f700;
         }
     }
 }
@@ -1353,7 +1351,7 @@ text {
     font-size: 16px;
     display: block;
     padding: 6px 0px 6px 8px;
-    box-shadow: -5px -5px 4px  rgba(206, 205, 205, 0.4), 5px 5px 4px  #bcc8d67c;
+    box-shadow: -5px -5px 4px rgba(206, 205, 205, 0.4), 5px 5px 4px #bcc8d67c;
     border-radius: 3px;
     margin-bottom: 6px;
     transition: all 0.2s;
@@ -1361,8 +1359,8 @@ text {
 .tab:hover {
     transform: scale(1.06);
     background-color: #2b62a056;
-    box-shadow: -5px -5px 4px  rgba(206, 205, 205, 0.4), 5px 5px 4px  #bcc8d67c, 
-    inset -2px -2px 2px  rgba(206, 205, 205, 0.5), inset 2px 2px 2px  #bcc8d67c;
+    box-shadow: -5px -5px 4px rgba(206, 205, 205, 0.4), 5px 5px 4px #bcc8d67c,
+        inset -2px -2px 2px rgba(206, 205, 205, 0.5), inset 2px 2px 2px #bcc8d67c;
 }
 .article {
     display: none;
@@ -1370,48 +1368,162 @@ text {
     text-align: center;
     font-size: 25px;
     margin-bottom: 5px;
+    opacity: 0;
+    transition: all 0.5s linear;
+    transition-delay: 1s;
+
+  
 }
 .article:target {
     display: block;
+    opacity: 1;
 }
-.article-1:target ~ .graphics__inner-tabs .tab-1{ background-color: #2b62a056; transform: scale(1.06);}
-.article-2:target ~ .graphics__inner-tabs .tab-2{ background-color: #2b62a056; transform: scale(1.06)}
-.article-3:target ~ .graphics__inner-tabs .tab-3{ background-color: #2b62a056; transform: scale(1.06)}
-.article-4:target ~ .graphics__inner-tabs .tab-4{ background-color: #2b62a056; transform: scale(1.06)}
-.article-5:target ~ .graphics__inner-tabs .tab-5{ background-color: #2b62a056; transform: scale(1.06)}
-.article-6:target ~ .graphics__inner-tabs .tab-6{ background-color: #2b62a056; transform: scale(1.06)}
-.article-7:target ~ .graphics__inner-tabs .tab-7{ background-color: #2b62a056; transform: scale(1.06)}
-.article-8:target ~ .graphics__inner-tabs .tab-8{ background-color: #2b62a056; transform: scale(1.06)}
-.article-9:target ~ .graphics__inner-tabs .tab-9{ background-color: #2b62a056; transform: scale(1.06)}
-.article-10:target ~ .graphics__inner-tabs .tab-10{ background-color: #2b62a056; transform: scale(1.06)}
-.article-11:target ~ .graphics__inner-tabs .tab-11{ background-color: #2b62a056; transform: scale(1.06)}
-.article-12:target ~ .graphics__inner-tabs .tab-12{ background-color: #2b62a056; transform: scale(1.06)}
-.article-13:target ~ .graphics__inner-tabs .tab-13{ background-color: #2b62a056; transform: scale(1.06)}
+.article-1:target ~ .graphics__inner-tabs .tab-1 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-2:target ~ .graphics__inner-tabs .tab-2 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-3:target ~ .graphics__inner-tabs .tab-3 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-4:target ~ .graphics__inner-tabs .tab-4 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-5:target ~ .graphics__inner-tabs .tab-5 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-6:target ~ .graphics__inner-tabs .tab-6 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-7:target ~ .graphics__inner-tabs .tab-7 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-8:target ~ .graphics__inner-tabs .tab-8 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-9:target ~ .graphics__inner-tabs .tab-9 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-10:target ~ .graphics__inner-tabs .tab-10 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-11:target ~ .graphics__inner-tabs .tab-11 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-12:target ~ .graphics__inner-tabs .tab-12 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
+.article-13:target ~ .graphics__inner-tabs .tab-13 {
+    background-color: #2b62a056;
+    transform: scale(1.06);
+}
 .article__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
     .article__town {
         margin: 0 auto;
-        border: 1px solid #000;
-        max-width: 350px;
+        max-width: 620px;
         width: 100%;
         margin-bottom: 10px;
-        padding: 5px 0px;
-       &-trigger {
-        height: 35px;
-        cursor: pointer;
-       }
+        &-trigger {
+            padding: 5px 0px;
+            height: 35px;
+            cursor: pointer;
+            border: 1px solid rgba(52, 24, 104, 0.1);
+            border-radius: 8px;
+            box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            color: $text;
+        }
+        &-trigger::after {
+            position: absolute;
+            content: "\f0d7";
+            font-family: "icomoon";
+            padding: 0px 5px 15px 10px;
+            right: 35px;
+            top: 8px;
+            color: $text;
+        }
     }
 }
+.article__town-trigger:hover {
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
 .article__town-content {
-    height: 60px;
+    height: 40px;
     font-size: 18px;
     display: none;
+    margin-top: 10px;
+    &-preview {
+        @include f700;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: #e7eaecd0;
+        padding: 10px 20px 10px 45px;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px #3a3a3a;
+        position: relative;
+        margin-left: 10px;
+    }
+    &-preview:hover {
+        background-color: #bdbfc0d0;
+    }
+    &-preview::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/pdficon.png);
+        height: 32px;
+        width: 29px;
+        left: 7px;
+        top: 2px;
+    }
+    &-download {
+        @include f700;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: #387aa0;
+        padding: 10px 20px 10px 50px;
+        border-radius: 5px;
+        box-shadow: 2px 3px 5px #3a3a3a;
+        letter-spacing: 1px;
+        position: relative;
+        color: #fff;
+        margin-left: 10px;
+        position: relative;
+    }
+    &-download:hover {
+        background-color: #254d64;
+    }
+    &-download::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/download.svg);
+        height: 25px;
+        width: 29px;
+        left: 12px;
+        top: 6px;
+    }
 }
 .article__town--active .article__town-trigger {
-    background-color:#254d64;
+    background-color: #2b62a056;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .article__town--active .article__town-content {
     display: block;
 }
-
-
-

@@ -123,7 +123,7 @@ $(function (){
             parent.remove('article__town--active')
         } else {
             $('.article__town').removeClass('article__town--active')
-            parent.addClass('article__town--active');
+            parent.addClass ('article__town--active');
         }
     });
 });
