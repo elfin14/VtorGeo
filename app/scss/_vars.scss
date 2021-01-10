@@ -1,0 +1,13 @@
+$text:  #797777;
+$green: #8fc20c;
+$blue: #387aa0;
+
+@mixin f500 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+}
+
+@mixin f700 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+}
