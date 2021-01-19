@@ -37,7 +37,8 @@ body {
 	min-height: 100%;
 }
 .content {
-	flex: 1 0 auto;
+    flex: 1 0 auto;
+    z-index: 1;
 }
 .footer {
 	flex: 0 0 auto;
