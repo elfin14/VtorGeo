@@ -1,3 +1,4 @@
+// section slider
 $(function () {
 
     $('.slider__img-inner').slick({
@@ -12,7 +13,7 @@ $(function () {
     });
 });
 
-// section slider
+// section map
 
 $('.area').on('click', function () {
     $('.map__inner-content').html($(this).attr('community'));
@@ -40,7 +41,7 @@ $('.area').on('click', function() {
     $(this).addClass('area__active');
 });
 
-// section map
+// style select for popup
 
 $('.select').each(function() {
     const _this = $(this),
@@ -102,7 +103,7 @@ $('.select').each(function() {
 let inputs = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
-// style select for popup
+
 
 $('a[href^="#tab"]').on('click.smoothscroll',function (e) {
     e.preventDefault();
@@ -114,6 +115,7 @@ $('a[href^="#tab"]').on('click.smoothscroll',function (e) {
         'scrollTop': window.pageYOffset});
         window.location.hash = target;
 });
+
 $(function (){
     $('.article__town-trigger').on('click', function(){
      
@@ -125,7 +127,28 @@ $(function (){
             $('.article__town').removeClass('article__town--active')
             parent.addClass ('article__town--active');
         }
+        
     });
 });
 
+function myFunction() {
+    let input, filter, ul, lil, a, i;
+    input = document.getElementById("mySearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myMenu");
+    lil = ul.getElementsByClassName("article__town-trigger");
+    for (i = 0; i < lil.length; i++) {
+      a = lil[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        lil[i].style.display = "";
+    } else {
+        $('.article__town').removeClass('article__town--active')
+    }  
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        lil[i].style.display = "";
+      } else {
+        lil[i].style.display = "none"
+      }
+    }
+}
 

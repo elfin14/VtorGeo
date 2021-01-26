@@ -120,15 +120,23 @@
                                 </div>
                             </aside>
                             <div class="debt">
+                                <div class="debt__breadcrumbs breadcrumbs">
+                                    <ul class="debt__breadcrumbs-list breadcrumbs-list">
+                                        <li><a href="index.html">Главная</a></li>
+                                        <li><span>Задолженности</span></li>
+                                    </ul>
+                                </div>
                                 <div class="debt__title title">Задолженности по оплате услуг</div>
                                 <div class="debt__inner">
-                                    <form action="#" id=form class="form__body">
+                                    <form action="#" id="form" class="form__body">
                                         <h1 class="debt__inner-text">Узнайте свою задолженность в один клик*</h1>
                                         <div class="form__item">
                                             <label for="formName" class="form__label">Выберите район:</label>
                                             <select name="region" id="regions" class="select">
-                                                <option value="1" disabled>Выбрать...<div class=""></div>
+                                                <option value="1" disabled>Выбрать...
                                                 </option>
+                                                <option value="2">Рубцовск</option>
+                                                <option value="3">Барнаул</option>
                                             </select>
                                         </div>
                                         <div class="form__item">
@@ -152,7 +160,10 @@
                                                 </option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="debt__button">Узнать</button>
+                                        <div class="form__item-button">
+                                            <button type="submit" class="debt__button">Узнать</button>
+                                            <button type="reset" from="form" class="debt__button">Отмена</button>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="debt__text">
