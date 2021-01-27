@@ -81,7 +81,7 @@
                                             <a href="#">Отчетность</a>
                                         </li>
                                         <li>
-                                            <a href="#">Контакты</a>
+                                            <a href="contacts.html">Контакты</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -2040,11 +2040,16 @@
                                             </div>
                                         </div>
                                         <div id="tab-11" class="article-11 article">
-                                            <div class="article__box">
+                                            <form>
+                                                <input type="text" id="mySearch" onkeyup="myFunction()"
+                                                    placeholder="Search.." title="Type in a category" value="">
+                                                <input type="reset" value="Очистить" />
+                                            </form>
+                                            <div class="article__box" id="myMenu">
                                                 <div class="article__box-col">
                                                     <div class="article__town">
                                                         <div class="article__town-trigger">
-                                                            c. Троинка
+                                                        <a href="">c. Троинка</a> 
                                                         </div>
                                                         <div class="article__town-content">
                                                             <a target="_blank"

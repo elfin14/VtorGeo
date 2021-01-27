@@ -1252,7 +1252,7 @@ text {
         background-color: #254d64;
     }
 }
-.doc-download:active{
+.doc-download:active {
     top: 3px;
     box-shadow: 0px 1px 2px rgb(58, 58, 58);
 }
@@ -1382,13 +1382,12 @@ text {
 .place {
     width: 100%;
     padding-left: 25px;
-    &__inner{
+    &__inner {
         display: flex;
         justify-content: space-around;
         flex-direction: column-reverse;
     }
     &__inner-tabs {
-        
         animation-delay: 0.1s;
         animation: move 0.3s linear;
         margin-bottom: 20px;
@@ -1409,7 +1408,7 @@ text {
         box-shadow: -5px -5px 4px rgba(206, 205, 205, 0.4), 5px 5px 4px #bcc8d67c;
     }
 }
-.place__download{
+.place__download {
     margin-top: 25px;
 }
 .place__title-text {
@@ -1418,15 +1417,15 @@ text {
     margin-bottom: 25px;
     margin-top: 0;
 }
-.place__map{
+.place__map {
     height: 450px;
 }
-.article-1:target ~ .place__inner-tabs .tab-1  {
+.article-1:target ~ .place__inner-tabs .tab-1 {
     background-color: #3c88dfee;
     transform: scale(1.06);
     color: #fff;
 }
-.article-9:target ~ .place__inner-tabs .tab-9  {
+.article-9:target ~ .place__inner-tabs .tab-9 {
     background-color: #3c88dfee;
     transform: scale(1.06);
     color: #fff;
@@ -1436,12 +1435,12 @@ text {
     transform: scale(1.06);
     color: #fff;
 }
-.article-11:target ~ .place__inner-tabs .tab-11  {
+.article-11:target ~ .place__inner-tabs .tab-11 {
     background-color: #3c88dfee;
     transform: scale(1.06);
     color: #fff;
 }
-.article-13:target ~ .place__inner-tabs .tab-13  {
+.article-13:target ~ .place__inner-tabs .tab-13 {
     background-color: #3c88dfee;
     transform: scale(1.06);
     color: #fff;
@@ -1661,7 +1660,7 @@ text {
     //     left: -2px;
     //     top: -1px;
     // }
-    &-preview:active{
+    &-preview:active {
         top: 3px;
         box-shadow: 0px 1px 2px rgb(58, 58, 58);
     }
@@ -1692,7 +1691,7 @@ text {
     //     left: 12px;
     //     top: 6px;
     // }
-    &-download:active{
+    &-download:active {
         top: 3px;
         box-shadow: 0px 1px 2px rgb(58, 58, 58);
     }
@@ -1727,3 +1726,109 @@ text {
         transform: scale(1);
     }
 }
+.news {
+    width: 100%;
+    padding-left: 25px;
+    &__article {
+        display: flex;
+        border-top: 1px dashed $blue;
+        padding: 10px 0px 10px 0px;
+        margin-bottom: 25px;
+        &-img {
+           object-fit: cover; 
+           object-position: center;
+           align-self: center;
+        }
+        &-text {
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
+.article__title {
+    text-align: center;
+    padding: 10px;
+    @include f700;
+    font-size: 20px;
+    color: $text;
+}
+.article__text {
+    color: $text;
+    padding: 0px 10px;
+    text-align: justify;
+    font-size: 17px;
+    text-indent: 1.5em;
+    line-height: 24px;
+}
+.article__data {
+    margin-top: 10px;
+    text-align: right;
+    color: $text;
+    @include f700;
+    padding-right: 10px;
+}
+.contacts {
+    padding-left: 25px;
+    width: 100%;
+    &__wrapper {
+        margin-top: 15px;
+        &-officehours {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+.contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $blue;
+    background-color: #fff;
+    &-address {
+        text-align: center;
+        align-self: center;
+        span {
+            display: block;
+            font-size: 18px;
+            color: $text;
+            line-height: 30px;
+            font-style: italic;
+            @include f500;
+        }
+        span:first-child {
+            margin: 20px;
+        }
+    }
+}
+.officehours__title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    @include f700;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid $blue;
+}
+.officehours__day {
+    display: flex;
+    justify-content: space-around;
+    li {
+        border-right: 1px solid $blue;
+    }
+    li:last-child {
+        border-right: none;
+    }
+    &-time li {
+        font-size: 18px;
+        color: $text;
+        margin-right: 15px;
+        border-right: none;
+    }
+    &-time li:first-child {
+     margin-bottom: 10px;
+     padding-bottom: 5px;
+     @include f700;
+     border-bottom: 1px dashed $blue;
+    }
+
+}
+
