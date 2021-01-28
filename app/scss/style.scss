@@ -1240,13 +1240,12 @@ text {
         color: #fff;
     }
     a::before {
-        content: "";
+        content: "\f019";
+        font-family: 'icomoon';
         position: absolute;
-        background-image: url(../images/download.svg);
-        height: 25px;
-        width: 29px;
-        left: 10px;
-        top: 10px;
+       font-size: 20px;
+        left: 20px;
+        top: 2px;
     }
     &:hover {
         background-color: #254d64;
@@ -1651,15 +1650,6 @@ text {
     &-preview:hover {
         background-color: #bdbfc0d0;
     }
-    // &-preview::before {
-    //     content: "";
-    //     position: absolute;
-    //     background-image: url(../images/pdficon.png);
-    //     height: 32px;
-    //     width: 29px;
-    //     left: -2px;
-    //     top: -1px;
-    // }
     &-preview:active {
         top: 3px;
         box-shadow: 0px 1px 2px rgb(58, 58, 58);
@@ -1681,16 +1671,6 @@ text {
     &-download:hover {
         background-color: #254d64;
     }
-    // &-download::before {
-    //     content: "";
-    //     position: absolute;
-    //     background-image: url(../images/download.png);
-
-    //     height: 16px;
-    //     width: 16px;
-    //     left: 12px;
-    //     top: 6px;
-    // }
     &-download:active {
         top: 3px;
         box-shadow: 0px 1px 2px rgb(58, 58, 58);
@@ -1781,12 +1761,17 @@ text {
 }
 .contacts__inner {
     display: flex;
-    justify-content: space-between;
-    border: 1px solid $blue;
+    justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #fff;
+    &-map {
+        max-width: 560px;
+        width: 100%;
+    }
     &-address {
         text-align: center;
         align-self: center;
+        width: 380px;
         span {
             display: block;
             font-size: 18px;
@@ -1829,6 +1814,101 @@ text {
      @include f700;
      border-bottom: 1px dashed $blue;
     }
-
 }
-
+.report {
+    width: 100%;
+    padding-left: 25px;
+    &__inner {
+        border-top: 1px dashed $blue;
+        margin-bottom: 20px;
+    }
+    &__text {
+        font-size: 20px;
+        text-align: center;
+        padding: 0px 40px 30px 40px;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    &__inner-docs {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px;
+        border-bottom: 1px dashed $blue;
+        .report__doc-title {
+            font-size: 20px;
+            color: $text;
+            text-align: start;
+            align-self: center;
+        }
+        .report__doc-download {
+            background-color: #387aa0;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 3px 5px #3a3a3a;
+            margin-left: 10px;
+            position: relative;
+            width: 40px;
+            height: 25px; 
+            align-self: center;
+            align-self: center;
+            a:before {
+                content: "\f019";
+                font-family: 'icomoon';
+                color: #fff;
+                font-size: 18px;
+                position: absolute;
+                top: 4px;
+                left: 13px;
+            }
+        }
+        .report__doc-download:hover {
+            background-color: #254d64;
+        }
+        .report__doc-download:active {
+            top: 3px;
+            box-shadow: 0px 1px 2px #254d64;
+        }
+    }
+}
+.report__doc-btn {
+ align-self: center;
+}
+.documentation{
+    width: 100%;
+    padding-left: 25px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner-link {
+        display: flex;
+        order: -1;
+        .documentation-link {
+            border-radius: 10px 10px 0px 0px;
+            padding: 5px 15px 5px 15px;
+            font-size: 16px;
+            background-color: rgba(188, 240, 208, 0.966);
+            flex-grow: 1;
+            text-align: center;
+            text-transform: uppercase;
+            color: $text;
+        }
+    }
+    .block {
+        display: none;
+    }
+    .block:target {
+        display: block;
+        background-color: rgba(78, 76, 190, 0.199);
+        height: 400px;
+    }
+}
+.documentation__inner-law:target ~ .documentation__inner-link .documentation-1 {
+    background-color: rgba(78, 76, 190, 0.199);
+}
+.documentation__inner-contract:target ~ .documentation__inner-link .documentation-2 {
+    background-color: rgba(78, 76, 190, 0.199);
+}
+.documentation__inner-doc:target ~ .documentation__inner-link .documentation-3 {
+    background-color: rgba(78, 76, 190, 0.199);
+}

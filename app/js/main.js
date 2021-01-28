@@ -107,7 +107,6 @@ im.mask(inputs);
 
 $('a[href^="#tab"]').on('click.smoothscroll',function (e) {
     e.preventDefault();
-
     const target = this.hash,
     $target = $(target);
 
@@ -116,6 +115,15 @@ $('a[href^="#tab"]').on('click.smoothscroll',function (e) {
         window.location.hash = target;
 });
 
+$('a[href^="#documentation"]').on('click.smoothscroll',function (e) {
+    e.preventDefault();
+    const target = this.hash,
+    $target = $(target);
+
+    $('html, body').stop().animate({
+        'scrollTop': window.pageYOffset});
+        window.location.hash = target;
+});
 $(function (){
     $('.article__town-trigger').on('click', function(){
      
@@ -131,26 +139,26 @@ $(function (){
     });
 });
 
-function myFunction() {
-    let input, filter, ul, lil, a, i;
-    input = document.getElementById("mySearch");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myMenu");
-    lil = ul.getElementsByClassName("article__town-trigger");
-    for (i = 0; i < lil.length; i++) {
-      a = lil[i].getElementsByTagName("a")[0];
-      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        lil[i].style.display = "";
-    } else {
-        $('.article__town').removeClass('article__town--active')
-    }  
-      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        lil[i].style.display = "";
-      } else {
-        lil[i].style.display = "none"
-      }
-    }
-}
+// function myFunction() {
+//     let input, filter, ul, lil, a, i;
+//     input = document.getElementById("mySearch");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myMenu");
+//     lil = ul.getElementsByClassName("article__town-trigger");
+//     for (i = 0; i < lil.length; i++) {
+//       a = lil[i].getElementsByTagName("a")[0];
+//       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//         lil[i].style.display = "";
+//     } else {
+//         $('.article__town').removeClass('article__town--active')
+//     }  
+//       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//         lil[i].style.display = "";
+//       } else {
+//         lil[i].style.display = "none"
+//       }
+//     }
+// }
 
 
 
