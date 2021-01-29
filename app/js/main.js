@@ -115,7 +115,7 @@ $('a[href^="#tab"]').on('click.smoothscroll',function (e) {
         window.location.hash = target;
 });
 
-$('a[href^="#documentation"]').on('click.smoothscroll',function (e) {
+$('a[href^="#physical"]').on('click.smoothscroll',function (e) {
     e.preventDefault();
     const target = this.hash,
     $target = $(target);
@@ -124,6 +124,8 @@ $('a[href^="#documentation"]').on('click.smoothscroll',function (e) {
         'scrollTop': window.pageYOffset});
         window.location.hash = target;
 });
+
+
 $(function (){
     $('.article__town-trigger').on('click', function(){
      

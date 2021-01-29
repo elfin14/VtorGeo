@@ -944,7 +944,8 @@
     &-item {
         max-width: 250px;
         width: 100%;
-        height: 450px;
+        max-height: 450px;
+        height: 100%;
         box-shadow: inset -15px -15px 15px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1),
             inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
@@ -961,10 +962,19 @@
         position: absolute;
         top: 50%;
         transform: translate(0, -50%);
-        color: rgba(71, 70, 70, 0.26);
+        color: rgba(110, 110, 110, 0.3);
         font-size: 16px;
         padding-left: 15px;
         padding-right: 15px;
+    }
+    &-title::before {
+        content: "\f25a";
+        font-family: "icomoon";
+        font-size: 30px;
+        position: absolute;
+        top: -40px;
+        left: 105px;
+        color: rgba(110, 110, 110, 0.3);
     }
 }
 .area {
@@ -1241,9 +1251,9 @@ text {
     }
     a::before {
         content: "\f019";
-        font-family: 'icomoon';
+        font-family: "icomoon";
         position: absolute;
-       font-size: 20px;
+        font-size: 20px;
         left: 20px;
         top: 2px;
     }
@@ -1715,9 +1725,9 @@ text {
         padding: 10px 0px 10px 0px;
         margin-bottom: 25px;
         &-img {
-           object-fit: cover; 
-           object-position: center;
-           align-self: center;
+            object-fit: cover;
+            object-position: center;
+            align-self: center;
         }
         &-text {
             flex-direction: column;
@@ -1809,10 +1819,10 @@ text {
         border-right: none;
     }
     &-time li:first-child {
-     margin-bottom: 10px;
-     padding-bottom: 5px;
-     @include f700;
-     border-bottom: 1px dashed $blue;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        @include f700;
+        border-bottom: 1px dashed $blue;
     }
 }
 .report {
@@ -1839,6 +1849,9 @@ text {
             color: $text;
             text-align: start;
             align-self: center;
+            a {
+                display: inline;
+            }
         }
         .report__doc-download {
             background-color: #387aa0;
@@ -1848,12 +1861,12 @@ text {
             margin-left: 10px;
             position: relative;
             width: 40px;
-            height: 25px; 
+            height: 25px;
             align-self: center;
             align-self: center;
             a:before {
                 content: "\f019";
-                font-family: 'icomoon';
+                font-family: "icomoon";
                 color: #fff;
                 font-size: 18px;
                 position: absolute;
@@ -1871,9 +1884,9 @@ text {
     }
 }
 .report__doc-btn {
- align-self: center;
+    align-self: center;
 }
-.documentation{
+.physical {
     width: 100%;
     padding-left: 25px;
     &__inner {
@@ -1883,32 +1896,162 @@ text {
     &__inner-link {
         display: flex;
         order: -1;
-        .documentation-link {
-            border-radius: 10px 10px 0px 0px;
-            padding: 5px 15px 5px 15px;
+        .physical-link {
+            border-radius: 20px 20px 0px 0px;
+            border-top: 1px solid $blue;
+            border-left: 1px solid $blue;
+            padding: 13px 15px 13px 15px;
             font-size: 16px;
-            background-color: rgba(188, 240, 208, 0.966);
+            background-color: $blue;
             flex-grow: 1;
             text-align: center;
             text-transform: uppercase;
-            color: $text;
+            @include f700;
+            color: #fff;
+        }
+        .physical-link:last-child {
+            border-right: 1px solid #000;
         }
     }
     .block {
         display: none;
+        margin-bottom: 30px;
+        border-right: 1px solid $blue;
+        border-left: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+        border-radius: 0px 0px 10px 10px;
     }
     .block:target {
         display: block;
-        background-color: rgba(78, 76, 190, 0.199);
-        height: 400px;
+        background-color: rgba(220, 241, 234, 0.25);
     }
 }
-.documentation__inner-law:target ~ .documentation__inner-link .documentation-1 {
-    background-color: rgba(78, 76, 190, 0.199);
+.physical__inner-statement:target ~ .physical__inner-link .physical-1 {
+    background-color: rgba(220, 241, 234, 0.25);
+    color: $blue;
+    text-shadow: 1px 1px 1px rgb(99, 98, 98);
 }
-.documentation__inner-contract:target ~ .documentation__inner-link .documentation-2 {
-    background-color: rgba(78, 76, 190, 0.199);
+.physical__inner-contract:target ~ .physical__inner-link .physical-2 {
+    background-color: rgba(220, 241, 234, 0.25);
+    color: $blue;
+    text-shadow: 1px 1px 1px rgb(99, 98, 98);
 }
-.documentation__inner-doc:target ~ .documentation__inner-link .documentation-3 {
-    background-color: rgba(78, 76, 190, 0.199);
+.physical-title {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    @include f700;
+}
+.contract__text {
+    text-indent: 1.5em;
+    text-align: justify;
+    font-size: 16px;
+    padding: 0px 15px;
+    span {
+        display: block;
+    }
+}
+.statement__doc {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    border-bottom: 1px dashed #387aa0;
+    &-title {
+        font-size: 18px;
+        color: #797777;
+        text-align: start;
+        align-self: center;
+        padding: 0px 10px;
+        a {
+            display: inline;
+        }
+    }
+    &-btn {
+        align-self: center;
+        margin: 0px 10px 0px 0px;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.statement__doc-download {
+    background-color: #387aa0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px #3a3a3a;
+    position: relative;
+    width: 40px;
+    height: 25px;
+    align-self: center;
+    a:before {
+        content: "\f019";
+        font-family: "icomoon";
+        color: #fff;
+        font-size: 18px;
+        position: absolute;
+        top: 4px;
+        left: 13px;
+    }
+}
+.consumers {
+    width: 100%;
+    padding-left: 25px;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 30px;
+        &-box {
+            margin-bottom: 15px;
+            .consumers__inner-text {
+                width: 200px;
+                height: 80px;
+                text-align: center;
+                a {
+                  padding-top: 25px;
+                    background-color: #fff;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    display: block;
+                    height: 100%;
+                    color: $blue;
+                    @include f700;
+                    border: 2px solid $blue;
+                    border-radius: 10px;
+                    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1);
+                    position: relative;
+                    transition: all 0.5s;
+                }
+                a:hover {
+                    background-color: $blue;
+                    color: #fff;
+                    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2), 5px 5px 5px rgba(0, 0, 0, 0.1),
+                        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+                }
+                a:active {
+                    top: 3px;
+                    background-color: #254d64;
+                }
+            }
+        }
+    }
+}
+.legalEntity {
+    width: 100%;
+    padding-left: 25px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(220, 241, 234, 0.25);
+        border: 1px solid $blue;
+        border-radius: 20px 20px 10px 10px;
+        margin-bottom: 15px;
+        &-text {
+            text-indent: 1.5em;
+            text-align: justify;
+            font-size: 18px;
+            padding: 0px 15px;
+            color: $text;
+        }
+    }
 }
